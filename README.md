@@ -1,9 +1,14 @@
 Very basic purely python3 XSS catcher. No need to worry about what field you put your cookie or such in. Just ensure it gets to your box, the script will parse everything out for you.
 
+# Install
+```bash
+$ pip install xss_catcher
+```
+
 # Use
 ```bash
-$ ./xss_catcher.py -h
-usage: xss_catcher.py [-h] [-ip IP] [-port PORT]
+$ xss_catcher -h
+usage: xss_catcher [-h] [-ip IP] [-port PORT]
 
 Catch XSS or just record who hits your port.
 
