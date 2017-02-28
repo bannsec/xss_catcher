@@ -80,16 +80,24 @@ def run():
   httpd.serve_forever()
 
 
-parser = argparse.ArgumentParser(description='Catch XSS or just record who hits your port.')
-parser.add_argument('-ip', type=str, nargs=1, default='0.0.0.0',
-                    help='IP Address to listen on (default 0.0.0.0)')
-parser.add_argument('-port', type=int, nargs=1, default=8000,
-                    help='Port to listen on (default 8000)')
+def main():
+    global IP
+    global PORT
 
-args = parser.parse_args()
+    parser = argparse.ArgumentParser(description='Catch XSS or just record who hits your port.')
+    parser.add_argument('-ip', type=str, nargs=1, default='0.0.0.0',
+                        help='IP Address to listen on (default 0.0.0.0)')
+    parser.add_argument('-port', type=int, nargs=1, default=8000,
+                    help='Port to listen on (default 8000)')    
+    
+    args = parser.parse_args()
 
 
-IP = args.ip
-PORT = args.port
+    IP = args.ip
+    PORT = args.port
+    
+    run()
 
-run()
+if __name__ == "__main__":
+
+    main()
