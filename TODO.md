@@ -4,3 +4,4 @@
   - Be able to change what is returned easily
   - Be able to trigger actions based on connection
  - Unit test
+ - Make it work on Windows -_-;;
