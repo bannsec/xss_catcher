@@ -1,0 +1,5 @@
+ - Handle POST commands
+ - Handle other non-standard verbs?? (strange use case.. but i guess not impossible)
+ - Add ability for custom hooks to be called on connection events
+  - Be able to change what is returned easily
+  - Be able to trigger actions based on connection
