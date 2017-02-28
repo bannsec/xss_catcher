@@ -1,0 +1,4 @@
+dist
+xss_catcher.egg-info
+*.pyc
+*.swp

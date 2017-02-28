@@ -26,7 +26,7 @@ setup(
         'Environment :: Console'
     ],
     keywords='xss',
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    packages=find_packages(exclude=['contrib', 'docs', 'tests','dist']),
     install_requires=[],
     entry_points={
         'console_scripts': [
