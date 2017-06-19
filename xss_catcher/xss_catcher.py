@@ -62,8 +62,15 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type','text/html')
         self.end_headers()
 
-        # Send message back to client
-        message = ""
+        # Send message back to client. If we have the file, give it.
+        path = os.path.abspath(os.path.join(os.path.abspath("."),self.path.lstrip("/")))
+
+        # Make sure that the file to give is in a subfolder.
+        if os.path.isfile(path) and path.startswith(os.path.abspath(".")):
+            with open(path,"r") as f:
+                message = f.read()
+        else:
+            message = ""
 
         # Write content as utf-8 data
         self.wfile.write(bytes(message, "utf8"))
