@@ -10,7 +10,7 @@ long_description = "See website for more info."
 
 setup(
     name='xss_catcher',
-    version='0.0.1',
+    version='0.0.2',
     description='Simple pythonic script to catch Cross Site Scripting (XSS) connections',
     long_description=long_description,
     url='https://github.com/owlz/xss_catcher',
